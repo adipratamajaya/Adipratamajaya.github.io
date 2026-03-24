@@ -1,23 +1,78 @@
-<!-- HEADER WAVE -->
+<!-- HERO SECTION -->
+<h1 align="center">Adi Pratama Jaya</h1>
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,100:2c5364&height=200&section=header&text=Adi%20Pratama%20Jaya&fontSize=40&fontColor=ffffff&animation=fadeIn" />
+  <b>SAP Enthusiast • Backend Developer • System Builder</b>
 </p>
 
-<h3 align="center">🚀 SAP Enthusiast | Backend Explorer | Future System Architect</h3>
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#skills">Skills</a> •
+  <a href="#projects">Projects</a> •
+  <a href="#contact">Contact</a>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=0:0f2027,100:2c5364&height=150&section=header&text=Welcome&fontSize=30&fontColor=ffffff" />
+</p>
 
 ---
 
-<!-- TYPING EFFECT -->
+## 🧠 About
+I am a tech enthusiast focused on building real-world systems using SAP and backend technologies.  
+Currently developing skills in system architecture and scalable applications.
+
+---
+
+## ⚙️ Skills
+| Backend | Database | Tools |
+|--------|--------|------|
+| Java | MySQL | Git |
+| Python | PostgreSQL | GitHub |
+| JavaScript |  | VS Code |
+
+---
+
+## 🚀 Projects
+<table>
+<tr>
+<td width="50%">
+
+### 🔹 SAP Mini System  
+Simple ERP simulation system  
+- Inventory flow  
+- Stock management  
+- Reporting  
+
+</td>
+<td width="50%">
+
+### 🔹 Backend API  
+REST API project  
+- CRUD system  
+- Authentication  
+- Database integration  
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📊 Stats
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=00F7FF&center=true&vCenter=true&lines=Building+Systems+That+Matter;Learning+SAP+%26+Backend;Turning+Ideas+Into+Reality" />
+  <img src="https://github-readme-stats.vercel.app/api?username=adipratamajaya&show_icons=true&theme=tokyonight" />
 </p>
 
 ---
 
-## 🧠 About Me
-```yaml
-name: Adi Pratama Jaya
-location: Indonesia
-focus: SAP System & Backend Development
-learning: [SAP S/4HANA, API Integration, System Design]
-goal: Build scalable systems & real business solutions
+## 📬 Contact
+<p align="center">
+  <a href="https://linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a> •
+  <a href="mailto:YOUR_EMAIL@gmail.com">Email</a>
+</p>
+
+---
+
+<p align="center">
+  <i>“Building systems that create real impact.”</i>
+</p>
