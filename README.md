@@ -1,6 +1,4 @@
 <!-- HERO SECTION -->
-<h1 align="center">Adi Pratama Jaya</h1>
-<p align="center">
   <b>SAP Enthusiast • Backend Developer • System Builder</b>
 </p>
 
