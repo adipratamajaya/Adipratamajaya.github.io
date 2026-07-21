@@ -2,6 +2,12 @@
 
 A responsive single-page portfolio website for Adi Pratamajaya, presenting his interests in SAP systems, business process optimization, and full-stack web development.
 
+## Website Design
+
+![Adi Pratamajaya portfolio website design](designWeb.jpg)
+
+The design uses a dark, technology-focused visual style with teal accents, a fixed navigation bar, responsive content sections, project cards, a career timeline, and a contact form.
+
 ## Overview
 
 The website is designed as a personal portfolio and professional introduction. It includes:
@@ -33,6 +39,7 @@ The website is designed as a personal portfolio and professional introduction. I
 .
 ├── index.html              # Main single-page portfolio markup
 ├── package.json            # Project metadata and npm scripts
+├── designWeb.jpg           # Website design preview
 ├── css/
 │   └── style.css           # Layout, theme, responsive styles, and animations
 ├── js/
