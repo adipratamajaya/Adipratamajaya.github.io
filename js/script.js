@@ -32,22 +32,18 @@ navLinks.forEach(link => {
 const slides = document.querySelectorAll('.about-slider .slide');
 const dots = document.querySelectorAll('.slider-dots .dot');
 let currentSlide = 0;
-const slideInterval = 4000; // Mengubah foto setiap 4 detik
+const slideInterval = 4000; 
 
 function nextSlide() {
-    // Hilangkan kelas aktif dari slide dan dot saat ini
     slides[currentSlide].classList.remove('active');
     dots[currentSlide].classList.remove('active');
     
-    // Pindah ke indeks selanjutnya
     currentSlide = (currentSlide + 1) % slides.length;
     
-    // Tambahkan kelas aktif pada slide dan dot baru
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
 }
 
-// Jalankan fungsi auto slide dengan interval waktu tetap
 setInterval(nextSlide, slideInterval);
 
 // ==========================================================================
@@ -85,9 +81,6 @@ navLinks.forEach(link => {
     });
 });
 
-// ==========================================================================
-// KODE JAVASCRIPT: Deteksi Gulir Halaman untuk Indikator Menu Otomatis
-// ==========================================================================
 window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
@@ -114,14 +107,11 @@ window.addEventListener('resize', () => {
 });
 
 // ==========================================================================
-// KODE JAVASCRIPT: Logika Interaktif Fitur Pop-up (Modal)
+// KODE JAVASCRIPT: Logika Interaktif Fitur Pop-up (Modal) 
 // ==========================================================================
-
 const customModal = document.getElementById('customModal');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const modalActionBtn = document.getElementById('modalActionBtn');
-
-// MENCARI SEMUA TOMBOL "Learn More" / "Watch Videos" / "View Live Demo"
 const projectLinks = document.querySelectorAll('.view-project-link');
 
 function openModal() {
@@ -134,10 +124,9 @@ function closeModal() {
     document.body.style.overflow = 'auto'; 
 }
 
-// MENGHUBUNGKAN SETIAP TOMBOL PROJECT DENGAN POP-UP
 projectLinks.forEach(link => {
     link.addEventListener('click', (event) => {
-        event.preventDefault(); // Mencegah halaman scroll ke atas tiba-tiba
+        event.preventDefault(); 
         openModal();
     });
 });
@@ -155,4 +144,24 @@ document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && customModal.classList.contains('open')) {
         closeModal();
     }
+});
+
+// ==========================================================================
+// KODE JAVASCRIPT: Animasi Parallax Float untuk Logo Hero (Opsi 3)
+// ==========================================================================
+// Menjalankan animasi setelah halaman dimuat untuk transisi yang mulus
+window.addEventListener('load', () => {
+    // Memberikan delay 1 detik sebelum ayunan dimulai
+    setTimeout(() => {
+        const logoContainer = document.querySelector('.hero-logo-container');
+        const logoRing = document.querySelector('.animated-logo-ring');
+        const logoImg = document.querySelector('.hero-logo-img');
+
+        if (logoContainer && logoRing && logoImg) {
+            // Menambahkan kelas-kelas animasi parallax
+            logoContainer.classList.add('parallax-float');
+            logoRing.classList.add('parallax-float');
+            logoImg.classList.add('parallax-float');
+        }
+    }, 1000); 
 });
