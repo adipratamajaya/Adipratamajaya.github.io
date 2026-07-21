@@ -1,0 +1,994 @@
+/* ==========================================================================
+   KODE CSS: Global Styles & Konfigurasi Tema
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+:root {
+    --bg-dark: #020817; 
+    --teal-primary: #00B8D9; 
+    --text-white: #FFFFFF;
+    --text-light-gray: #D1D5DB;
+    --card-bg: #09132B; 
+    --hover-effect: #03235A;
+    --font-primary: 'Google Sans', sans-serif; 
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.6s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   KODE CSS: Animasi Estetik & Populer
+   ========================================================================== */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation var(--transition-slow) forwards;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInAnimation {
+    to { opacity: 1; }
+}
+
+.pulse-glow {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(0, 184, 217, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 184, 217, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 184, 217, 0); }
+}
+
+/* ==========================================================================
+   KODE CSS: Bagian Header & Navigasi Indikator
+   ========================================================================== */
+header {
+    background-color: rgba(2, 8, 23, 0.95);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-group, .logo-group-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo, .footer-logo {
+    height: 35px;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links {
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    padding: 5px 0;
+    opacity: 0.8;
+    text-decoration: none;
+    color: var(--text-white);
+    transition: var(--transition-fast);
+}
+
+.nav-link:hover, .nav-link.active {
+    opacity: 1;
+    color: var(--teal-primary);
+}
+
+.nav-indicator {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    height: 3px;
+    background-color: var(--teal-primary);
+    width: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.contact-btn-header {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.contact-btn-header:hover {
+    background-color: var(--hover-effect);
+    border-color: var(--teal-primary);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-white);
+    transition: var(--transition-fast);
+}
+
+/* ==========================================================================
+   KODE CSS: Bagian Hero / Landing View
+   ========================================================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 150px 50px 100px;
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.welcome-text {
+    color: var(--text-light-gray);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome-text i {
+    color: var(--teal-primary);
+}
+
+.hero-title {
+    font-size: 3.8rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+.hero-subtitle span {
+    color: var(--teal-primary);
+}
+
+.underline {
+    height: 3px;
+    width: 80px;
+    background-color: var(--teal-primary);
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: var(--text-light-gray);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.primary-btn {
+    background-color: var(--teal-primary);
+    color: var(--bg-dark);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 184, 217, 0.4);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+}
+
+.secondary-btn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-white);
+}
+
+.hero-logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animated-logo-ring {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 2px dashed rgba(0, 184, 217, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: ringRotate 20s linear infinite;
+}
+
+@keyframes ringRotate {
+    to { transform: rotate(360deg); }
+}
+
+.hero-logo-img {
+    width: 160px;
+    animation: logoOrbitCorrection 20s linear infinite reverse;
+}
+
+@keyframes logoOrbitCorrection {
+    to { transform: rotate(-360deg); }
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: var(--teal-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--teal-primary);
+}
+
+.p1 { top: 10%; left: 80%; }
+.p2 { top: 70%; left: 15%; }
+.p3 { top: 45%; left: 90%; }
+
+/* ==========================================================================
+   KODE CSS: Bagian About & Slider Foto Otomatis
+   ========================================================================== */
+.about-section, .projects, .skills-section, .experience-section, .contact-section {
+    padding: 100px 50px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.featured-heading, .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.featured-heading::before, .section-title::before {
+    content: '';
+    width: 4px;
+    height: 35px;
+    background-color: var(--teal-primary);
+    border-radius: 2px;
+}
+
+.about-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-slider-container {
+    width: 400px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 184, 217, 0.3);
+}
+
+.about-slider {
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.about-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.about-slider .slide.active {
+    opacity: 1;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.slider-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: var(--transition-fast);
+}
+
+.slider-dots .dot.active {
+    background-color: var(--teal-primary);
+    width: 25px;
+    border-radius: 10px;
+}
+
+.about-text-content {
+    flex: 1;
+}
+
+.about-text-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   KODE CSS: Bagian Cards Projects
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--teal-primary);
+    box-shadow: 0 10px 25px rgba(0, 184, 217, 0.1);
+}
+
+.card-icon-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--teal-primary);
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    color: var(--teal-primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--teal-primary);
+    background-color: rgba(0, 184, 217, 0.05);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.card-description {
+    color: var(--text-light-gray);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.view-project-link {
+    color: var(--text-white);
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.view-project-link:hover {
+    color: var(--teal-primary);
+}
+
+/* ==========================================================================
+   KODE CSS: Bagian Skills Interaktif
+   ========================================================================== */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.skills-category h3 {
+    margin-bottom: 20px;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skills-category h3 i {
+    color: var(--teal-primary);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.skill-item-interactive {
+    background-color: var(--card-bg);
+    padding: 20px 15px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    cursor: pointer;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.skill-item-interactive i {
+    font-size: 2.2rem;
+    color: var(--text-light-gray);
+    transition: var(--transition-fast);
+}
+
+.skill-item-interactive span {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.skill-item-interactive:hover {
+    transform: scale(1.05);
+    background-color: var(--hover-effect);
+    border-color: var(--teal-primary);
+}
+
+.skill-item-interactive:hover i {
+    color: var(--teal-primary);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   KODE CSS: Bagian Roadmap Career Timeline
+   ========================================================================== */
+.roadmap-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+
+.roadmap-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.roadmap-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.roadmap-item.left { left: 0; text-align: right; }
+.roadmap-item.right { left: 50%; text-align: left; }
+
+.roadmap-dot {
+    position: absolute;
+    top: 25px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--bg-dark);
+    border: 3px solid var(--teal-primary);
+    z-index: 2;
+    transition: var(--transition-fast);
+}
+
+.roadmap-item.left .roadmap-dot { right: -8px; }
+.roadmap-item.right .roadmap-dot { left: -8px; }
+
+.roadmap-content {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: var(--transition-fast);
+}
+
+.roadmap-year {
+    display: inline-block;
+    color: var(--teal-primary);
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.roadmap-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.roadmap-content p {
+    font-size: 0.95rem;
+}
+
+.roadmap-item:hover .roadmap-content {
+    border-color: var(--teal-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 184, 217, 0.05);
+}
+
+.roadmap-item:hover .roadmap-dot {
+    background-color: var(--teal-primary);
+    box-shadow: 0 0 10px var(--teal-primary);
+}
+
+/* ==========================================================================
+   KODE CSS: Bagian Contact & Form Formal
+   ========================================================================== */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 30px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-item i {
+    font-size: 1.3rem;
+    color: var(--teal-primary);
+}
+
+.contact-form {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-light-gray);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: rgba(2, 8, 23, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-white);
+    font-family: var(--font-primary);
+    transition: var(--transition-fast);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--teal-primary);
+    box-shadow: 0 0 8px rgba(0, 184, 217, 0.2);
+}
+
+.form-submit-btn {
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+/* ==========================================================================
+   KODE CSS: Bagian Footer
+   ========================================================================== */
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 0;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text-footer {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 5px;
+}
+
+.back-to-top-btn {
+    width: 40px;
+    height: 40px;
+    background-color: var(--hover-effect);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-white);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-fast);
+}
+
+.back-to-top-btn:hover {
+    background-color: var(--teal-primary);
+    color: var(--bg-dark);
+}
+
+/* ==========================================================================
+   KODE CSS: Responsivitas HP & Tablet (Android & iOS)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .hero { flex-direction: column; text-align: center; justify-content: center; padding-top: 120px; }
+    .hero-content { max-width: 100%; margin-bottom: 50px; display: flex; flex-direction: column; align-items: center; }
+    .cta-buttons { justify-content: center; }
+    .about-container { flex-direction: column; }
+    .about-slider-container { width: 100%; max-width: 350px; }
+    .contact-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .header-container { padding: 0 20px; }
+    nav { position: fixed; right: -100%; top: 0; height: 100vh; width: 75%; background-color: var(--bg-dark); flex-direction: column; justify-content: center; padding: 40px; transition: right 0.4s ease; z-index: 999; }
+    nav.active { right: 0; }
+    .nav-links { flex-direction: column; gap: 20px; width: 100%; }
+    .nav-indicator { display: none; }
+    .menu-toggle { display: block; }
+    
+    /* Hambuger Menu Cross Animation */
+    #mobile-menu.is-active .bar:nth-child(2) { opacity: 0; }
+    #mobile-menu.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    #mobile-menu.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .hero-title { font-size: 2.6rem; }
+    .skills-container { grid-template-columns: 1fr; }
+    
+    /* Roadmap Responsive Adjustment */
+    .roadmap-line { left: 20px; }
+    .roadmap-item { width: 100%; padding-left: 55px; padding-right: 0; }
+    .roadmap-item.left { text-align: left; }
+    .roadmap-item.right { left: 0; }
+    .roadmap-item.left .roadmap-dot, .roadmap-item.right .roadmap-dot { left: 12px; }
+}
+
+/* ==========================================================================
+   KODE CSS: Fitur Pop-up / Modal Box Beranimasi Estetik
+   ========================================================================== */
+
+/* Latar belakang transparan gelap di belakang pop-up */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 8, 23, 0.85); /* Warna dasar dark template */
+    backdrop-filter: blur(6px); /* Efek blur estetik pada background portfolio */
+    -webkit-backdrop-filter: blur(6px); /* Dukungan browser Safari/iOS */
+    z-index: 2000; /* Memastikan pop-up berada di lapisan paling atas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease; /* Transisi halus saat muncul */
+}
+
+/* State kelas aktif saat pop-up dimunculkan lewat JavaScript */
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Kotak Konten Utama Pop-up */
+.modal-box {
+    background-color: #09132B; /* Warna card bg */
+    border: 1px solid rgba(0, 184, 217, 0.3); /* Bingkai tipis warna teal */
+    padding: 35px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 184, 217, 0.15);
+    
+    /* Animasi Awal: Mengecil dan bergeser sedikit ke bawah */
+    transform: scale(0.85) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efek pegas halus */
+}
+
+/* Animasi Masuk: Kotak membesar sempurna saat pop-up terbuka */
+.modal-overlay.open .modal-box {
+    transform: scale(1) translateY(0);
+}
+
+/* Tombol Silang Close di Sudut Kanan Atas */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #D1D5DB;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efek Putar & Warna Teal saat Tombol X di-hover */
+.modal-close-btn:hover {
+    color: #00B8D9;
+    transform: rotate(90deg);
+}
+
+/* Gaya Teks Header Pop-up */
+.modal-header h3 {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-header h3 i {
+    color: #00B8D9; /* Warna ikon teal */
+}
+
+/* Gaya Teks Deskripsi di Dalam Pop-up */
+.modal-body p {
+    color: #D1D5DB;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Penataan Tombol Aksi di Bagian Bawah */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ==========================================================================
+   Responsivitas Pop-up untuk Layar Smartphone (Android & iPhone)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .modal-box {
+        padding: 25px 20px;
+        margin: 0 15px; /* Jarak aman di sisi kanan-kiri layar HP */
+    }
+    .modal-header h3 {
+        font-size: 1.2rem;
+    }
+    .modal-body p {
+        font-size: 0.95rem;
+    }
+}
+/* ==========================================================================
+   KODE CSS: Fitur Pop-up / Modal Box Beranimasi Estetik
+   ========================================================================== */
+
+/* Latar belakang transparan gelap di belakang pop-up */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 8, 23, 0.85); /* Warna dasar dark template */
+    backdrop-filter: blur(6px); /* Efek blur estetik pada background portfolio */
+    -webkit-backdrop-filter: blur(6px); /* Dukungan browser Safari/iOS */
+    z-index: 2000; /* Memastikan pop-up berada di lapisan paling atas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease; /* Transisi halus saat muncul */
+}
+
+/* State kelas aktif saat pop-up dimunculkan lewat JavaScript */
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Kotak Konten Utama Pop-up */
+.modal-box {
+    background-color: #09132B; /* Warna card bg */
+    border: 1px solid rgba(0, 184, 217, 0.3); /* Bingkai tipis warna teal */
+    padding: 35px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 184, 217, 0.15);
+    
+    /* Animasi Awal: Mengecil dan bergeser sedikit ke bawah */
+    transform: scale(0.85) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efek pegas halus */
+}
+
+/* Animasi Masuk: Kotak membesar sempurna saat pop-up terbuka */
+.modal-overlay.open .modal-box {
+    transform: scale(1) translateY(0);
+}
+
+/* Tombol Silang Close di Sudut Kanan Atas */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #D1D5DB;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efek Putar & Warna Teal saat Tombol X di-hover */
+.modal-close-btn:hover {
+    color: #00B8D9;
+    transform: rotate(90deg);
+}
+
+/* Gaya Teks Header Pop-up */
+.modal-header h3 {
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-header h3 i {
+    color: #00B8D9; /* Warna ikon teal */
+}
+
+/* Gaya Teks Deskripsi di Dalam Pop-up */
+.modal-body p {
+    color: #D1D5DB;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Penataan Tombol Aksi di Bagian Bawah */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* tambahan icon sosial media */
+    .social-icons {
+        margin-top: 10px;
+    }
