@@ -1,0 +1,12 @@
+{
+  "name": "mywebiste_",
+  "version": "1.0.0",
+  "description": "Website for portofolio by adi pratamajaya",
+  "license": "ISC",
+  "author": "adi pratamajaya",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
