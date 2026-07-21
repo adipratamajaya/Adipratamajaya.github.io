@@ -990,5 +990,77 @@ footer {
 
 /* tambahan icon sosial media */
     .social-icons {
-        margin-top: 10px;
+        margin-top: 15px;
     }
+    .social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* --- CTA Spanduk LinkedIn --- */
+.cta-linkedin {
+    background-color: var(--card-bg);
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 40px 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.cta-linkedin:hover {
+    border-color: var(--teal-primary);
+    box-shadow: 0 0 20px rgba(0, 184, 217, 0.1);
+}
+
+.linkedin-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.linkedin-banner-icon {
+    font-size: 3rem;
+    color: var(--teal-primary);
+}
+
+.linkedin-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.linkedin-text p {
+    color: var(--text-light-gray);
+}
+
+.visit-linkedin-btn {
+    background-color: transparent;
+    border: 1px solid var(--teal-primary);
+    color: var(--teal-primary);
+}
+
+.visit-linkedin-btn:hover {
+    background-color: var(--teal-primary);
+    color: var(--bg-dark);
+}
+.visit-linkedin-btn {
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
